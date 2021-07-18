@@ -3,6 +3,7 @@
     text-align: left;
     background-color: #e2e8f0;    
 } */
+/* var highlightGreenBar = '#5ea3a3' */
 
 a{
     text-decoration: none;
@@ -87,20 +88,20 @@ a{
 }
 
 .nav .show>.nav-link.nav-link-faded, .nav-link.nav-link-faded.active, .nav-link.nav-link-faded:active, .nav-pills .nav-link.nav-link-faded.active, .navbar-nav .show>.nav-link.nav-link-faded {
-    color: #3367b5;
+    color: #5ea3a3;
     background-color: #c9d8f0;
 }
 
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
     color: #fff;
-    background-color: #467bcb;
+    background-color: #5ea3a3; 
 }
 .nav-link.has-icon {
     display: flex;
     align-items: center;
 }
 .nav-link.active {
-    color: #467bcb;
+    color: #5ea3a3;
 }
 .nav-pills .nav-link {
     border-radius: .25rem;

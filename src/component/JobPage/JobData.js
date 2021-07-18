@@ -26,12 +26,12 @@ export const jobObj1 = {
 
 export const jobObj2 = {
     id:2,
-    companyName:'GitHub',
+    companyName:'Intel',
     description: 'Software Engineer Intern',
     buttonLabel: 'Apply',
     buttonLabel2: 'Details',
-    img: img2,
-    alt:'github.jpeg'
+    img: img15,
+    alt:'intel.jpeg'
 }
 
 export const jobObj3 = {

@@ -15,7 +15,7 @@ const MainSection = () => {
         <>
             <MainContainer id='home'>
                 <MainBg>
-                    <VideoBg autoPlay loop muted src={BackgroundVideo} type='video/mp4' controls controlsList="nodownload"/>
+                    <VideoBg autoPlay loop muted src={BackgroundVideo} type='video/mp4' controlsList="nodownload"/>
                 </MainBg>
                 <MainContent>
                     {/* <MainH1>UPGRAD</MainH1> */}

@@ -27,7 +27,6 @@ export const ProfileRightH1 = styled.h1 `
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 20px;
-    font-family: 'IBM Plex Serif', serif;
 `
 
 export const ProfileCardWrapper = styled.div `
@@ -91,11 +90,11 @@ export const AboutContainer = styled.div`
     height: 20%;
     background-color: blue;
 `
-export const ContactContainer = styled.div`
+export const ContactContainer = styled.div `
     height: 20%;
     background-color: blue;
 `
-export const EndorsedContainer = styled.div`
+export const EndorsedContainer = styled.div ` 
     height: 30%;
     background-color: blue;
 `
@@ -103,6 +102,22 @@ export const DetailsH6 = styled.h6 ``
 
 export const DetailsDes = styled.div ``
 
+export const ProfileButton = styled.button `
+    margin-right: 20px; 
+    background-color: #FED988;
+    border-color: #FED988;
+    color: #000000;
+    &:hover {
+        background: #cfcfcf; 
+        color: white;
+        cursor: pointer;
+        border-color: #cfcfcf;
+      }
+`
+
+export const ProfileName = styled.h4 ``
+
+export const ProfileSum = styled.p ``
 
 
 

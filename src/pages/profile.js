@@ -17,13 +17,20 @@ import {
     ContactContainer,
     EndorsedContainer,
     DetailsH6,
-    DetailsDes
+    DetailsDes,
+    ProfileButton,
+    ProfileName,
+    ProfileSum
 } from "../component/ProfilePage/ProfileElem";
-import { View } from "react";
-import profilePic from "../images/jiaozi.jpeg";
-import ReactRoundedImage from "react-rounded-image";
-import '../component/ProfilePage/styles.css';
+
+import Monash from "../images/monash.jpeg";
+import HighSchool from "../images/high-school.jpeg";
+import GoogleLogo from "../images/google.jpeg";
+import AppLab from "../images/applabs.jpeg";
+
 import Boy from "../images/boy-5.svg"
+import '../component/ProfilePage/styles.css';
+
 
 const styles = {
     button: {
@@ -31,7 +38,7 @@ const styles = {
         backgroundColor: "#FED988",
         borderColor: "#FED988",
         marginLeft: "5px",
-    },
+    }
 };
 
 const Profile = () => {
@@ -49,23 +56,16 @@ const Profile = () => {
                                     width={150}
                                 />
                                 <div className="mt-3">
-                                    <h4>John Doe</h4>
-                                    <p className="text-secondary mb-1">
-                                        Full Stack Developer
-                                    </p>
-                                    <p className="text-muted font-size-sm">
-                                        Bay Area, San Francisco, CA
-                                    </p>
-                                    <button className="btn btn-primary" style={{marginRight:'20px', backgroundColor: '#FED988', borderColor: '#FED988',color: '#000000'}}>
-                                        Follow
-                                    </button>
-                                    <button className="btn btn-outline-primary" style={{marginRight:'20px', backgroundColor: '#FED988', borderColor: '#FED988',color: '#000000'}}>
-                                        Message
-                                    </button>
+                                    <ProfileName>John Doe</ProfileName>
+                                    <ProfileSum className="text-secondary mb-1">Full Stack Developer</ProfileSum>
+                                    <ProfileSum className="text-muted font-size-sm">Subang Jaya, Selengor, Malaysia</ProfileSum>
+                                    <ProfileButton className="btn btn-outline-primary">Follow</ProfileButton>
+                                    <ProfileButton className="btn btn-outline-primary">Message</ProfileButton>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                     <div style={{padding: "20px"}}></div>        
                     <div className="card mb-3">
                         <div className="card-body">
@@ -74,7 +74,7 @@ const Profile = () => {
                                     <DetailsH6 className="mb-0">Full Name</DetailsH6>
                                 </div>
                                 <DetailsDes className="col-sm-9 text-secondary">
-                                    Kenneth Valdez
+                                    John Doe
                                 </DetailsDes>
                             </div>
                             <hr/>
@@ -137,31 +137,16 @@ const Profile = () => {
                     <ProfileCardWrapper className="card mb-3">
                         <div className="row no-gutters">
                             <div className="col-md-4">
-                                <svg
-                                    className="bd-placeholder-img"
-                                    width="100%"
-                                    height="120px"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    aria-label="Placeholder: Image"
-                                    preserveAspectRatio="xMidYMid slice"
-                                    role="img"
-                                >
-                                    <title>Placeholder</title>
-                                    <rect
-                                        width="100%"
-                                        height="100%"
-                                        fill="#868e96"
-                                    />
-                                </svg>
+                                <img src={GoogleLogo} alt='work1' style={{width: '100%', height: '120px'}}/>
                             </div>
 
                             <div className="col-md-8">
                                 <div className="card-body">
                                     <CardTitle className="card-title">
-                                        Data Science
+                                        Data Science Intern 
                                     </CardTitle>
                                     <CardText className="card-text">
-                                        NBC Tech Co. <br /> 2019 - Present
+                                        Google <br /> Jan 2019 - Apr 2019
                                     </CardText>
                                 </div>
                             </div>
@@ -171,31 +156,16 @@ const Profile = () => {
                     <ProfileCardWrapper className="card mb-3">
                         <div className="row no-gutters">
                             <div className="col-md-4">
-                                <svg
-                                    className="bd-placeholder-img"
-                                    width="100%"
-                                    height="120px"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    aria-label="Placeholder: Image"
-                                    preserveAspectRatio="xMidYMid slice"
-                                    role="img"
-                                >
-                                    <title>Placeholder</title>
-                                    <rect
-                                        width="100%"
-                                        height="100%"
-                                        fill="#868e96"
-                                    />
-                                </svg>
+                            <img src={AppLab} alt='work1' style={{width: '100%', height: '120px'}}/>
                             </div>
 
                             <div className="col-md-8">
                                 <div className="card-body">
                                     <CardTitle className="card-title">
-                                        Data Science
+                                        Software Engineer Intern
                                     </CardTitle>
                                     <CardText className="card-text">
-                                        NBC Tech Co. <br /> 2019 - Present
+                                        App Lab Co. <br /> Jun 2019 - Oct 2019
                                     </CardText>
                                 </div>
                             </div>
@@ -209,22 +179,7 @@ const Profile = () => {
                     <ProfileCardWrapper2 className="card mb-3">
                         <div className="row no-gutters">
                             <div className="col-md-4">
-                                <svg
-                                    className="bd-placeholder-img"
-                                    width="100%"
-                                    height="120px"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    aria-label="Placeholder: Image"
-                                    preserveAspectRatio="xMidYMid slice"
-                                    role="img"
-                                >
-                                    <title>Placeholder</title>
-                                    <rect
-                                        width="100%"
-                                        height="100%"
-                                        fill="#868e96"
-                                    />
-                                </svg>
+                            <img src={HighSchool} alt='work1' style={{width: '100%', height: '120px'}}/>
                             </div>
 
                             <div className="col-md-8">
@@ -233,7 +188,7 @@ const Profile = () => {
                                         SMK Sekolah Tinggi
                                     </CardTitle>
                                     <CardText className="card-text">
-                                        High School <br /> 2013 - 2018
+                                        High School <br /> Jan 2013 - Dec 2018
                                     </CardText>
                                 </div>
                             </div>
@@ -243,22 +198,7 @@ const Profile = () => {
                     <ProfileCardWrapper2 className="card mb-3">
                         <div className="row no-gutters">
                             <div className="col-md-4">
-                                <svg
-                                    className="bd-placeholder-img"
-                                    width="100%"
-                                    height="120px"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    aria-label="Placeholder: Image"
-                                    preserveAspectRatio="xMidYMid slice"
-                                    role="img"
-                                >
-                                    <title>Placeholder</title>
-                                    <rect
-                                        width="100%"
-                                        height="100%"
-                                        fill="#868e96"
-                                    />
-                                </svg>
+                            <img src={Monash} alt='work1' style={{width: '100%', height: '120px'}}/>
                             </div>
 
                             <div className="col-md-8">
@@ -267,7 +207,7 @@ const Profile = () => {
                                         Monash University
                                     </CardTitle>
                                     <CardText className="card-text">
-                                        Bachelor of Computer Science <br /> 2019
+                                        Bachelor of Computer Science <br /> Oct 2019
                                         - Present
                                     </CardText>
                                 </div>

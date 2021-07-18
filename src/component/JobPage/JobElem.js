@@ -13,8 +13,7 @@ export const JobH1 = styled.h1 `
     color: #000;
     font-size: 36px;
     margin-left: 60px;
-    margin-top: 150px;
-    font-family: Gill Sans MT;
+    margin-top: 80px;
     font-style: normal;
     font-weight: bold;
 `

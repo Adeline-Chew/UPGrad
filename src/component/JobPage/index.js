@@ -12,6 +12,9 @@ import { jobObj1, jobObj2, jobObj3,
         jobObj10, jobObj11, jobObj12,
         jobObj13, jobObj14, jobObj15, } from './JobData';
 import JobCard from './JobCard';
+import { Searchbar } from 'react';
+import Filters from "./filters.jsx";
+import './filters.css'
 
 const styles = {
     cardImage: {
@@ -22,6 +25,8 @@ const styles = {
     }
   }
 
+
+
 const JobPage = ({id,
     companyName,
     description,
@@ -31,6 +36,8 @@ const JobPage = ({id,
     return (
         <>
             <JobContainer>
+                <div style={{padding: "30px 0"}}></div>
+            <Filters/>
             <JobH1>Showing 14 Jobs</JobH1>
 
             <Row xs={1} md={3} className="g-4" style={{ marginLeft: '40px', marginTop: '20px'}}>
@@ -86,7 +93,6 @@ const JobPage = ({id,
                 <Col>
                     <JobCard {...jobObj13} />
                 </Col>
-
             </Row>
             </JobContainer>
         </>

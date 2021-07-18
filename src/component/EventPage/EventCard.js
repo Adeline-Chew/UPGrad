@@ -4,9 +4,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const styles = {
     cardImage: {
       objectFit: 'cover',
-      borderRadius: "10px",
+      borderRadius: "0px 0px 15px 15px",
       height: 180,
-      width: 286,
+      width: 400,
       alignSelf:'center'
     }
 }
@@ -17,7 +17,7 @@ const EventCard = ({id,
     img,
     alt}) => {
     return (    
-        <Card style={{ width: '18rem' }}>
+        <Card style={{ width: '25rem', borderRadius: "15px" }}>
         <Card.Body>
             <Card.Title><b>{title}</b></Card.Title>
             <Card.Text>

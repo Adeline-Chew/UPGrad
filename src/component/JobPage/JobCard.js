@@ -2,8 +2,7 @@ import React from 'react'
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/Row';
+import './styles.css'
 
 const styles = {
     cardImage: {
@@ -17,7 +16,9 @@ const styles = {
       color: '#000000',
       backgroundColor: '#FED988',
       borderColor: '#FED988',
-      marginLeft:'5px'
+      marginLeft:'5px',
+      transition: '0.2s ease-in-out',
+      textDecoration: 'none'
     }
   }
 
@@ -37,7 +38,7 @@ const JobCard = ({id,
                         {description}
                         </Card.Text>
                         
-                        <Button variant="primary" style={styles.button} size="lg">{buttonLabel}</Button>
+                        <Button className="button" variant="primary" style={styles.button} size="lg">{buttonLabel}</Button>
                         <Button variant="primary" style={styles.button} size="lg">{buttonLabel2}</Button>
                         
                     </Card.Body>

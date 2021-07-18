@@ -8,6 +8,8 @@ import Boy4 from "../images/boy-4.svg"
 import Girl1 from "../images/girl.svg"
 import Girl2 from "../images/girl-2.svg"
 import Girl3 from "../images/girl-3.svg"
+// import * as Fa from 'react-icons/fa';
+import * as Bs from 'react-icons/bs';
 
 const Feed = () => {
     return (
@@ -36,31 +38,7 @@ const Feed = () => {
                                         data-toggle="modal"
                                         data-target="#threadModal"
                                     >
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            width={24}
-                                            height={24}
-                                            viewBox="0 0 24 24"
-                                            fill="none"
-                                            stroke="currentColor"
-                                            strokeWidth={2}
-                                            strokeLinecap="round"
-                                            strokeLinejoin="round"
-                                            className="feather feather-plus mr-2"
-                                        >
-                                            <line
-                                                x1={12}
-                                                y1={5}
-                                                x2={12}
-                                                y2={19}
-                                            />
-                                            <line
-                                                x1={5}
-                                                y1={12}
-                                                x2={19}
-                                                y2={12}
-                                            />
-                                        </svg>
+                                        <Bs.BsPlus />
                                         NEW POST
                                     </button>
                                 </div>
@@ -137,6 +115,12 @@ const Feed = () => {
                                                                 >
                                                                     #General
                                                                 </a>
+                                                                <a
+                                                                    href="javascript:void(0)"
+                                                                    className="nav-link nav-link-faded has-icon"
+                                                                >
+                                                                    #C2001
+                                                                </a>
                                                             </nav>
                                                         </div>
                                                     </div>
@@ -196,11 +180,12 @@ const Feed = () => {
                                             arrow_forward_ios
                                         </i>
                                     </a>
-                                    <select className="custom-select custom-select-sm w-auto mr-1">
+                                    <select className="custom-select custom-select-sm w-auto mr-1" style={{fontSize:'19px'}}>
                                         <option selected>Latest</option>
                                         <option value={1}>Popular</option>
                                         <option value={3}>All</option>
                                     </select>
+                                    <div style={{margin: '0 10px'}}></div>
                                     <span className="input-icon input-icon-sm ml-auto w-auto">
                                         <input
                                             type="text"
@@ -293,7 +278,7 @@ const Feed = () => {
                                                             href="#"
                                                             data-toggle="collapse"
                                                             data-target=".forum-content"
-                                                            className="text-body"
+                                                            className="text-body title"
                                                         >
                                                             Anyone heard kkDex Company?
                                                         </a>
@@ -306,7 +291,7 @@ const Feed = () => {
                                                     </p>
                                                     <p className="text-muted">
                                                         <a href="javascript:void(0)">
-                                                            jlrdw
+                                                            oweh0382
                                                         </a>{" "}
                                                         replied{" "}
                                                         <span className="text-secondary font-weight-bold">
@@ -323,6 +308,9 @@ const Feed = () => {
                                                         <i className="far fa-comment ml-2" />{" "}
                                                         1
                                                     </span>
+                                                    <span className='hashtag'>
+                                                        #CompanyReviews &nbsp; &nbsp; #C2001
+                                                    </span>
                                                 </div>
                                             </div>
                                         </div>
@@ -336,7 +324,7 @@ const Feed = () => {
                                                     data-target=".forum-content"
                                                 >
                                                     <img
-                                                        src="https://bootdey.com/img/Content/avatar/avatar3.png"
+                                                        src={Boy2}
                                                         className="mr-3 rounded-circle"
                                                         width={50}
                                                         alt="User"
@@ -348,10 +336,9 @@ const Feed = () => {
                                                             href="#"
                                                             data-toggle="collapse"
                                                             data-target=".forum-content"
-                                                            className="text-body"
+                                                            className="text-body title"
                                                         >
-                                                            Http client post raw
-                                                            content
+                                                            Is my CGPA enough to get into FLAG?
                                                         </a>
                                                     </h6>
                                                     <p className="text-secondary">
@@ -362,7 +349,7 @@ const Feed = () => {
                                                     </p>
                                                     <p className="text-muted">
                                                         <a href="javascript:void(0)">
-                                                            ciungulete
+                                                            wtan0019
                                                         </a>{" "}
                                                         replied{" "}
                                                         <span className="text-secondary font-weight-bold">
@@ -379,6 +366,9 @@ const Feed = () => {
                                                         <i className="far fa-comment ml-2" />{" "}
                                                         2
                                                     </span>
+                                                    <span className='hashtag'>
+                                                        #General
+                                                    </span>
                                                 </div>
                                             </div>
                                         </div>
@@ -392,7 +382,7 @@ const Feed = () => {
                                                     data-target=".forum-content"
                                                 >
                                                     <img
-                                                        src="https://bootdey.com/img/Content/avatar/avatar4.png"
+                                                        src={Boy3}
                                                         className="mr-3 rounded-circle"
                                                         width={50}
                                                         alt="User"
@@ -404,10 +394,9 @@ const Feed = () => {
                                                             href="#"
                                                             data-toggle="collapse"
                                                             data-target=".forum-content"
-                                                            className="text-body"
+                                                            className="text-body title"
                                                         >
-                                                            Top rated filter not
-                                                            working
+                                                            [Tips] 10 Most Common Interview Questions
                                                         </a>
                                                     </h6>
                                                     <p className="text-secondary">
@@ -418,7 +407,7 @@ const Feed = () => {
                                                     </p>
                                                     <p className="text-muted">
                                                         <a href="javascript:void(0)">
-                                                            bugsysha
+                                                            qsia1292
                                                         </a>{" "}
                                                         replied{" "}
                                                         <span className="text-secondary font-weight-bold">
@@ -435,6 +424,9 @@ const Feed = () => {
                                                         <i className="far fa-comment ml-2" />{" "}
                                                         9
                                                     </span>
+                                                    <span className='hashtag'>
+                                                        #InterviewQuestions
+                                                    </span>
                                                 </div>
                                             </div>
                                         </div>
@@ -448,7 +440,7 @@ const Feed = () => {
                                                     data-target=".forum-content"
                                                 >
                                                     <img
-                                                        src="https://bootdey.com/img/Content/avatar/avatar5.png"
+                                                        src={Girl2}
                                                         className="mr-3 rounded-circle"
                                                         width={50}
                                                         alt="User"
@@ -460,10 +452,9 @@ const Feed = () => {
                                                             href="#"
                                                             data-toggle="collapse"
                                                             data-target=".forum-content"
-                                                            className="text-body"
+                                                            className="text-body title"
                                                         >
-                                                            Create a delimiter
-                                                            field
+                                                            Can I apply Internship in my home country?
                                                         </a>
                                                     </h6>
                                                     <p className="text-secondary">
@@ -474,7 +465,7 @@ const Feed = () => {
                                                     </p>
                                                     <p className="text-muted">
                                                         <a href="javascript:void(0)">
-                                                            jackalds
+                                                            Lim
                                                         </a>{" "}
                                                         replied{" "}
                                                         <span className="text-secondary font-weight-bold">
@@ -491,6 +482,9 @@ const Feed = () => {
                                                         <i className="far fa-comment ml-2" />{" "}
                                                         10
                                                     </span>
+                                                    <span className='hashtag'>
+                                                        #AskCounsellor &nbsp; &nbsp; #C2001
+                                                    </span>
                                                 </div>
                                             </div>
                                         </div>
@@ -504,7 +498,7 @@ const Feed = () => {
                                                     data-target=".forum-content"
                                                 >
                                                     <img
-                                                        src="https://bootdey.com/img/Content/avatar/avatar1.png"
+                                                        src={Girl3}
                                                         className="mr-3 rounded-circle"
                                                         width={50}
                                                         alt="User"
@@ -516,9 +510,9 @@ const Feed = () => {
                                                             href="#"
                                                             data-toggle="collapse"
                                                             data-target=".forum-content"
-                                                            className="text-body"
+                                                            className="text-body title"
                                                         >
-                                                            One model 4 tables
+                                                            [Tips] Writing the Perfect Resume
                                                         </a>
                                                     </h6>
                                                     <p className="text-secondary">
@@ -529,7 +523,7 @@ const Feed = () => {
                                                     </p>
                                                     <p className="text-muted">
                                                         <a href="javascript:void(0)">
-                                                            bugsysha
+                                                            ploh0001
                                                         </a>{" "}
                                                         replied{" "}
                                                         <span className="text-secondary font-weight-bold">
@@ -546,6 +540,9 @@ const Feed = () => {
                                                         <i className="far fa-comment ml-2" />{" "}
                                                         4
                                                     </span>
+                                                    <span className='hashtag'>
+                                                        #ReviewMyResume
+                                                    </span>
                                                 </div>
                                             </div>
                                         </div>
@@ -559,7 +556,7 @@ const Feed = () => {
                                                     data-target=".forum-content"
                                                 >
                                                     <img
-                                                        src="https://bootdey.com/img/Content/avatar/avatar1.png"
+                                                        src={Boy4}
                                                         className="mr-3 rounded-circle"
                                                         width={50}
                                                         alt="User"
@@ -571,10 +568,9 @@ const Feed = () => {
                                                             href="#"
                                                             data-toggle="collapse"
                                                             data-target=".forum-content"
-                                                            className="text-body"
+                                                            className="text-body title"
                                                         >
-                                                            Auth attempt returns
-                                                            false
+                                                            [Sharing] My working experience at Google as a SDE
                                                         </a>
                                                     </h6>
                                                     <p className="text-secondary">
@@ -585,7 +581,7 @@ const Feed = () => {
                                                     </p>
                                                     <p className="text-muted">
                                                         <a href="javascript:void(0)">
-                                                            michaeloravec
+                                                            ktey0001
                                                         </a>{" "}
                                                         replied{" "}
                                                         <span className="text-secondary font-weight-bold">
@@ -602,6 +598,9 @@ const Feed = () => {
                                                         <i className="far fa-comment ml-2" />{" "}
                                                         3
                                                     </span>
+                                                    <span className='hashtag'>
+                                                        #CompanyReviews
+                                                    </span>
                                                 </div>
                                             </div>
                                         </div>
@@ -609,9 +608,7 @@ const Feed = () => {
                                     <ul className="pagination pagination-sm pagination-circle justify-content-center mb-0">
                                         <li className="page-item disabled">
                                             <span className="page-link has-icon">
-                                                <i className="material-icons">
-                                                    chevron_left
-                                                </i>
+                                                <Bs.BsChevronLeft />
                                             </span>
                                         </li>
                                         <li className="page-item">
@@ -638,16 +635,17 @@ const Feed = () => {
                                                 className="page-link has-icon"
                                                 href="javascript:void(0)"
                                             >
-                                                <i className="material-icons">
+                                                {/* <i className="material-icons">
                                                     chevron_right
-                                                </i>
+                                                </i> */}
+                                                <Bs.BsChevronRight />
                                             </a>
                                         </li>
                                     </ul>
                                 </div>
                                 {/* /Forum List */}
                                 {/* Forum Detail */}
-                                <div className="inner-main-body p-2 p-sm-3 collapse forum-content">
+                                {/* <div className="inner-main-body p-2 p-sm-3 collapse forum-content">
                                     <a
                                         href="#"
                                         className="btn btn-light btn-sm mb-3 has-icon"
@@ -778,13 +776,13 @@ const Feed = () => {
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> */}
                                 {/* /Forum Detail */}
                                 {/* /Inner main body */}
                             </div>
                             {/* /Inner main */}
                         </div>
-                        {/* New Thread Modal */}
+                        {/* New Thread Modal
                         <div
                             className="modal fade"
                             id="threadModal"
@@ -871,7 +869,7 @@ const Feed = () => {
                                     </form>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </>

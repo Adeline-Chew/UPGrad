@@ -4,12 +4,11 @@ var bgcolor = '#faf9f9';
 var lightGreen = '#76dbd1';
 
 export const DashboardContainer = styled.div `
-    height: 2000px;
+    height: 1500px;
     background-color: ${bgcolor};
-    align-items: center;
-    justify-content: space-between;
-    /* display: flex; */
-    flex-direction: column;
+    align-items: space-between;
+    align-content: space-between;
+    flex-flow: column wrap;
 
     @media screen and (max-width: 768px) {
         height: 2300px;
@@ -21,13 +20,16 @@ export const DashboardContainer = styled.div `
 `
 
 export const DashboardContent = styled.div `
-    max-width: 1000px;
-    margin: 40px 100px;
-    display: grid;
+    width: 100%;
+    margin-top: 40px;
+    display: inline-flex;
     grid-template-columns: 1fr 1fr;
-    align-items: center;
+    align-items: stretch;
+    align-content: flex-start;
     grid-gap: 300px;
     padding: 0 50px;
+    vertical-align: top;
+    justify-content: center;
 
     @media screen and (max-width: 768px) {
         grid-template-columns: 1fr;
@@ -41,10 +43,12 @@ export const DashboardCard = styled.div `
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
     border-radius: 15px;
     /* box-shadow: 0 1px 3px rgba(0,0,0,0.2); */
     transition: all 0.2s ease-in-out;
+    vertical-align: top;
+    position: relative;
 
     &:hover {
         transform: scale(1.02);
@@ -59,8 +63,8 @@ export const CardTitle = styled.div `
     height: 64px;
     text-align: center;
     background-color: ${lightGreen};
-    border-radius: 15px;
-    padding-bottom: 50px;
+    border-radius: 10px 10px 0px 0px;
+    padding-bottom: 40px;
 `
 
 export const CardTitleH1 = styled.h1 `
@@ -123,12 +127,23 @@ font-size: 4em;
 border-radius: 15px;
 `
 
+export const CarouselContainer = styled.div `
+    width: 100%;
+    height: 500px;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+`
+
 export const CarouselWrapper = styled.div `
     width: 70%;
-    height: 400px;
-    margin-top: 800px;
-    position: absolute;   
-    right: 250px;
+    margin-top: 900px;
+    margin-bottom: 400px;
+    position: absolute;
+    align-items: center;
+    align-content: center;
     top: 990px;  
-    
 `
+
+

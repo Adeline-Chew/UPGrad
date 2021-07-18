@@ -1,8 +1,10 @@
 import React from 'react';
 import {EventTitle, EventContainer, EventWrapper, EventColumn, EventInnerColumn, EventSmallerCard, CardColumn} from '../component/EventPage/EventElem';
-import { eventObj1, eventObj2, eventObj3, } from '../component/EventPage/EventData';
+import { eventObj1, eventObj2, eventObj3, eventObj4, eventObj5, eventObj6,} from '../component/EventPage/EventData';
 import EventCard from '../component/EventPage/EventCard';
-import {Card, CardColumns} from "react-bootstrap";
+// import {Card, CardColumns} from "react-bootstrap";
+import image1 from "../images/event-2.jpeg";
+import image2 from "../images/google-poster.jpeg"
 
 const Event = () => {
     return (
@@ -11,40 +13,48 @@ const Event = () => {
 
             <EventTitle>Upcoming Events</EventTitle>
             <EventWrapper>
+                <h4><b><i> This Week</i></b></h4>
             <EventColumn>
-                <h4> This Week </h4>
+                
                 <EventInnerColumn>
                     <EventSmallerCard>
                         <h4><b>13 July</b></h4>
-                        <p><small>Help you decide your computer science career path.</small></p>
+                        <p style={{fontSize: '18px', lineHeight: '1.0'}}><small>Help you decide your computer science career path.</small></p>
                     </EventSmallerCard>
                     <EventSmallerCard>
                         <h4><b>15 July</b></h4>
-                        <p><small>Employer presentations are usually organised by the employer as opposed to the university careers service.</small></p>
+                        <p style={{fontSize: '18px', lineHeight: '1.0'}}><small>Employer presentations are usually organised by the employer as opposed to the university careers service.</small></p>
                     </EventSmallerCard>
                 </EventInnerColumn>
                 <EventInnerColumn>
                     
-                    <h3><b>16 July</b></h3>
-                    <p><small>Get yourself along to a careers event as soon as possible to learn more about the industry or sector you want to follow a career in.</small></p>
-                    
+                    <h3 style={{color: 'black'}}><b>16 July</b></h3>
+                    <p style={{fontSize: '18px', lineHeight: '1.0'}}><small>Get yourself along to a careers event to learn more about the industry you want to follow a career in.</small></p>
+                    <EventSmallerCard>
+                        <img src={image1} alt="event-2.jpeg" width="280px" height="160px"/>
+                    </EventSmallerCard>
+
                 </EventInnerColumn>
             </EventColumn>
+            
             <EventColumn>
-                <h4> This Week </h4>
+                <h4><b><i>Next Week</i></b></h4>
                 <EventInnerColumn>
                     <EventSmallerCard>
-                        <h4><b>13 July</b></h4>
-                        <p><small>Help you decide your computer science career path.</small></p>
+                        <h4><b>21 July</b></h4>
+                        <p style={{fontSize: '18px', lineHeight: '1.0'}}><small>Help you decide your computer science career path.</small></p>
                     </EventSmallerCard>
                     <EventSmallerCard>
-                        <h4><b>15 July</b></h4>
-                        <p><small>Employer presentations are usually organised by the employer as opposed to the university careers service.</small></p>
+                        <h4><b>25 July</b></h4>
+                        <p style={{fontSize: '18px', lineHeight: '1.0'}}><small>Common mistake and general rules in Resume Writing.</small></p>
                     </EventSmallerCard>
                 </EventInnerColumn>
                 <EventInnerColumn>
-                    <h3><b>16 July</b></h3>
-                    <p><small>Get yourself along to a careers event as soon as possible to learn more about the industry or sector you want to follow a career in.</small></p>
+                    <h3 style={{color: 'black'}}><b>26 July</b></h3>
+                    <p style={{fontSize: '18px', lineHeight: '1.0'}}><small>Leadership programme we run regular webinars to advise candidates on the latest trends.</small></p>
+                    <EventSmallerCard>
+                        <img src={image2} alt="event-2.jpeg" width="280px" height="160px"/>
+                    </EventSmallerCard>
                 </EventInnerColumn>
             </EventColumn>
             </EventWrapper>
@@ -68,16 +78,17 @@ const Event = () => {
 
             <EventWrapper> 
                 <CardColumn>
-                    <EventCard {... eventObj1} />
+                    <EventCard {... eventObj4} />
                 </CardColumn>
 
                 <CardColumn>
-                    <EventCard {... eventObj2} />
+                    <EventCard {... eventObj5} />
                 </CardColumn>
 
                 <CardColumn>
-                    <EventCard {... eventObj3} />
+                    <EventCard {... eventObj6} />
                 </CardColumn>
+                
             </EventWrapper>
            
             </EventContainer>

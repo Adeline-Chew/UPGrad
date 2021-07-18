@@ -12,11 +12,11 @@ export const EventTitle = styled.h1`
     font-size: 36px;
     margin-left: 60px;
     margin-top: 40px;
-    font-family: 'IBM Plex Serif', serif;
+    font-family: 'Rubik', sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 36px;
-    border-bottom: 6px solid orange;
+    border-bottom: 6px solid #08ffc8;
     position: relative;
 `
 
@@ -44,6 +44,9 @@ export const EventSmallerCard = styled.div `
 `
 
 export  const CardColumn = styled.div `
-    width: 30%; 
+    width: 40%; 
     float: left; 
+`
+export const EventImg = styled.img `
+
 `
