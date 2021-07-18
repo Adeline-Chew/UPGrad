@@ -124,11 +124,11 @@ border-radius: 15px;
 `
 
 export const CarouselWrapper = styled.div `
-    width: 550px;
-    height: 300px;
+    width: 70%;
+    height: 400px;
     margin-top: 800px;
     position: absolute;   
-    right: 500px;
+    right: 250px;
     top: 990px;  
     
 `

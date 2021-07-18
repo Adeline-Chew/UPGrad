@@ -7,10 +7,7 @@ import {
     MainContent,
     MainH1,
     MainH2,
-    MainP,
-    MobileIcon
 } from './MainSectionElem'
-import { BsArrowDownShort, BsChevronDown } from "react-icons/bs";
 
 const MainSection = () => {
 
@@ -18,7 +15,7 @@ const MainSection = () => {
         <>
             <MainContainer id='home'>
                 <MainBg>
-                    <VideoBg autoPlay loop muted src={BackgroundVideo} type='video/mp4' />
+                    <VideoBg autoPlay loop muted src={BackgroundVideo} type='video/mp4' controls controlsList="nodownload"/>
                 </MainBg>
                 <MainContent>
                     {/* <MainH1>UPGRAD</MainH1> */}

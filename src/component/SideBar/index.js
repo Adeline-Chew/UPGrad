@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
+// import {browserHistory} from 'react-router'
 import { animateScroll as scroll } from "react-scroll";
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useHistory } from 'react-router-dom';
 import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
 import { SidebarData } from './SideBarData';
@@ -75,27 +76,30 @@ const SideBar = () => {
         }
     };
 
-    const [bgColor, setBgColor] = useState(false);
+    const path = useLocation().pathname;
+    const currentRoute = useHistory().location.pathname;
+    const [bgColor, setBgColor] = useState({
+      isHome: window.location.pathname === '/'
+    });
 
-    const changeBgColor = () => {
-      if (window.location.pathname === '/') {
-        setBgColor(false);
-      }else {
-        setBgColor(true);
+    const detectHome = () => {
+      const homePath = window.location.pathname === '/';
+      if (!homePath) {
+        setBgColor(prevBgColor => ({
+          ...prevBgColor,
+          isHome: false
+        }));
+      }
+      if (homePath) {
+        setBgColor(prevBgColor => ({
+          ...prevBgColor,
+          isHome: true
+        }))
       }
     }
-
-    useEffect(() => {
-      window.addEventListener("click", changeBgColor);
-    })
-
     useEffect(() => {
         window.addEventListener("scroll", changeNav);
     }, []);
-
-    // const toggleHome = () => {
-    //     scroll.scrollToTop();
-    // };
 
   const [sidebar, setSidebar] = useState(false);
 
@@ -104,7 +108,7 @@ const SideBar = () => {
   return (
     <>
       <IconContext.Provider value={{ color: '#fff' }}>
-        <Nav scrollNav={scrollNav} bgColor={bgColor}>
+        <Nav scrollNav={scrollNav} bgColor={currentRoute === '/' ? !bgColor : bgColor}>
           <NavIcon to='#'>
             <FaIcons.FaBars onClick={showSidebar} />
           </NavIcon>

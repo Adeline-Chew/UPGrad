@@ -51,6 +51,11 @@ export const NavLogo = styled(LinkR)`
     margin-left: 50px; 
     font-weight: 300;
     text-decoration: none;
+
+    &:hover {
+        transition: all 0.2s ease-in-out;
+        color: ${highlightGreenBar};
+    }
 `;
 
 export const NavImgWrap = styled.div `
