@@ -1,6 +1,5 @@
   .container {
     max-width: 100%;
-    height: 100%;
   }
 
   /* .row {
@@ -80,15 +79,14 @@
   
   .chat-message {
     padding: 60px 20px 115px;
+    background: #f9f9f9;  
+    position: relative;
+    align-content: flex-start;
   }
   
   .chat {
       list-style: none;
       margin: 0;
-  }
-  
-  .chat-message{
-      background: #f9f9f9;  
   }
   
   .chat li img {

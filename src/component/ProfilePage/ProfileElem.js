@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const ProfileContainer = styled.div`
     max-width: 100%;
-    max-height: 100%;
+    height: 1000px;
     align-items: center;
     grid-gap: 5px;
     display: flex;
@@ -33,12 +33,27 @@ export const ProfileCardWrapper = styled.div `
     margin-left: 20px;
     width: 500px;
     background-color: #515E63;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+        transform: scale(1.02);
+        transition: all 0.2s ease-in-out;
+        cursor: pointer;
+    }
 `
 
 export const ProfileCardWrapper2 = styled.div `
     margin-left: 20px;
     width: 500px;
     background-color: #2F5D62;
+
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+        transform: scale(1.02);
+        transition: all 0.2s ease-in-out;
+        cursor: pointer;
+    }
 `
 
 export const SkillsWrapper = styled.div `
@@ -57,6 +72,14 @@ export const SkillsWrapper = styled.div `
     font-weight: bold;
     border-radius: 5px;
     margin-left: 20px;
+
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+        transform: scale(1.02);
+        transition: all 0.2s ease-in-out;
+        cursor: pointer;
+    }
 `
 export const CardTitle = styled.h5 `
     color: white;
@@ -108,10 +131,10 @@ export const ProfileButton = styled.button `
     border-color: #FED988;
     color: #000000;
     &:hover {
-        background: #cfcfcf; 
+        background: #d3d3d3; 
         color: white;
         cursor: pointer;
-        border-color: #cfcfcf;
+        border-color: #d3d3d3;
       }
 `
 

@@ -3,7 +3,6 @@ import * as Fa from 'react-icons/fa';
 import * as Ai from 'react-icons/ai';
 import * as Ri from 'react-icons/ri';
 import * as Md from 'react-icons/md';
-// import AiOutlineHome as Home from 'react-icons/'
 
 export const SidebarData = [
   {
@@ -26,30 +25,17 @@ export const SidebarData = [
     icon: <Md.MdExplore />
   },
   {
-    title: 'UPChat',
-    path: '/chat',
-    icon: <Ri.RiChatSmile2Fill />
-  },
-  {
     title: 'UPEvent',
     path: '/event',
     icon: <Md.MdEventAvailable />,
 
     iconClosed: <Ri.RiArrowDownSLine />,
     iconOpened: <Ri.RiArrowUpSLine />,
-
-    subNav: [
-      {
-        title: 'Message 1',
-        path: '/messages/message1',
-        icon: <Md.MdEventAvailable />
-      },
-      {
-        title: 'Message 2',
-        path: '/messages/message2',
-        icon: <Md.MdEventAvailable />
-      }
-    ]
+  },
+  {
+    title: 'UPChat',
+    path: '/chat',
+    icon: <Ri.RiChatSmile2Fill />
   },
   {
     title: 'Profile',

@@ -2,13 +2,13 @@ import React from 'react';
 import {EventTitle, EventContainer, EventWrapper, EventColumn, EventInnerColumn, EventSmallerCard, CardColumn} from '../component/EventPage/EventElem';
 import { eventObj1, eventObj2, eventObj3, eventObj4, eventObj5, eventObj6,} from '../component/EventPage/EventData';
 import EventCard from '../component/EventPage/EventCard';
-// import {Card, CardColumns} from "react-bootstrap";
 import image1 from "../images/event-2.jpeg";
 import image2 from "../images/google-poster.jpeg"
+import Footer from "../component/Footer"
 
 const Event = () => {
     return (
-        <div>
+        <>
             <EventContainer>
 
             <EventTitle>Upcoming Events</EventTitle>
@@ -92,7 +92,9 @@ const Event = () => {
             </EventWrapper>
            
             </EventContainer>
-        </div>
+            <Footer />
+        </>
+        
     )
 }
 

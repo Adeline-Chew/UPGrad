@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import {Link} from 'react-router-dom'
+var highlightGreenBar = '#5ea3a3'
 
 export const FooterContainer = styled.footer `
     background-color: #101522;
@@ -61,7 +62,7 @@ export const FooterLink = styled(Link) `
     font-size: 14px;
 
     &:hover {
-        color: #01bf71;
+        color: ${highlightGreenBar};
         transition: 0.3s ease-in-out;
     }
 `
@@ -94,6 +95,11 @@ export const SocialLogo = styled(Link) `
     margin-bottom: 16px;
     font-weight: bold;
     font-family:'Doppio One',sans-serif;
+    &:hover {
+        color: ${highlightGreenBar};
+        transition: 0.3s ease-in-out;
+    }
+
 `
 
 export const WebsiteRights = styled.small `

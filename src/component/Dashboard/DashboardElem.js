@@ -46,9 +46,9 @@ export const DashboardCard = styled.div `
     align-items: flex-start;
     border-radius: 15px;
     /* box-shadow: 0 1px 3px rgba(0,0,0,0.2); */
-    transition: all 0.2s ease-in-out;
     vertical-align: top;
     position: relative;
+    transition: all 0.2s ease-in-out;
 
     &:hover {
         transform: scale(1.02);

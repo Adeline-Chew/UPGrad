@@ -25,3 +25,7 @@ p, td {
   font-family: 'Titillium Web', sans-serif;
 }
 
+.mtz-download-btn {
+  display: none;
+}
+

@@ -4,7 +4,7 @@ export const EventContainer = styled.div `
     padding-top: 80px;
     padding-right: 50px;
     max-width: 100%;
-    max-height: 100vh;
+    max-height: 1700px;
 `
 
 export const EventTitle = styled.h1`
@@ -23,6 +23,7 @@ export const EventTitle = styled.h1`
 export const EventWrapper = styled.div `
     display: flex;
     padding: 20px 0 20px 58px;
+    margin-bottom: 40px;
 `
 
 export const EventColumn = styled.div `

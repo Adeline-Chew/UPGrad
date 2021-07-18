@@ -8,8 +8,8 @@ import Boy4 from "../images/boy-4.svg"
 import Girl1 from "../images/girl.svg"
 import Girl2 from "../images/girl-2.svg"
 import Girl3 from "../images/girl-3.svg"
-// import * as Fa from 'react-icons/fa';
 import * as Bs from 'react-icons/bs';
+import Footer from "../component/Footer"
 
 const Feed = () => {
     return (
@@ -875,7 +875,9 @@ const Feed = () => {
             </>
             </FeedForum>
             </FeedContainer>
+            <Footer />
         </>
+        
     );
 };
 

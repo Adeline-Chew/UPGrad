@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
-// import {browserHistory} from 'react-router'
 import { animateScroll as scroll } from "react-scroll";
 import styled from 'styled-components';
-import { Link, useLocation, useHistory } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
 import { SidebarData } from './SideBarData';
@@ -16,17 +15,16 @@ import {
 } from '../NavBar/NavBarElem'
 import logo from "../../images/logo.svg";
 
-var mainGreen = '#000000'
+var mainColor = '#000000'
 
 
 const Nav = styled.div `
-    background: ${({scrollNav, bgColor}) => (bgColor ? mainGreen : scrollNav ? mainGreen :"transparent")};
-    /* background: ${mainGreen}; */
+    background: ${({scrollNav, bgColor}) => (bgColor ? mainColor : scrollNav ? mainColor :"transparent")};
     height: 80px;
     margin-top: -80px;
     /* margin-left: 250px; */
     display: flex;
-    /* justify-content: center; */
+    justify-content: space-between;
     align-items: center;
     font-size: 1rem;
     position: sticky;
@@ -48,7 +46,7 @@ const NavIcon = styled(Link)`
 `;
 
 const SidebarNav = styled.nav`
-  background: ${mainGreen};
+  background: ${mainColor};
   width: 250px;
   height: 100vh;
   display: flex;
@@ -76,8 +74,8 @@ const SideBar = () => {
         }
     };
 
-    const path = useLocation().pathname;
-    const currentRoute = useHistory().location.pathname;
+    const currentRoute = useLocation().pathname;
+    // var bgColor = false;
     const [bgColor, setBgColor] = useState({
       isHome: window.location.pathname === '/'
     });
@@ -97,6 +95,8 @@ const SideBar = () => {
         }))
       }
     }
+
+    
     useEffect(() => {
         window.addEventListener("scroll", changeNav);
     }, []);
@@ -105,10 +105,14 @@ const SideBar = () => {
 
   const showSidebar = () => setSidebar(!sidebar);
 
+  const toggleHome = () => {
+    scroll.scrollToTop();
+};
+
   return (
     <>
       <IconContext.Provider value={{ color: '#fff' }}>
-        <Nav scrollNav={scrollNav} bgColor={currentRoute === '/' ? !bgColor : bgColor}>
+        <Nav onClick={toggleHome} scrollNav={scrollNav} bgColor={currentRoute === '/' ? !bgColor : bgColor}>
           <NavIcon to='#'>
             <FaIcons.FaBars onClick={showSidebar} />
           </NavIcon>
