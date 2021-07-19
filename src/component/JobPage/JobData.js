@@ -1,5 +1,4 @@
 import img1 from "../../images/company-logo.jpeg";
-import img2 from "../../images/github.jpeg";
 import img3 from "../../images/Light-bringers.png";
 import img4 from "../../images/logo-2.jpeg";
 import img5 from "../../images/logo-3.jpeg";

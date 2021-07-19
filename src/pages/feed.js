@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { FeedContainer, FeedForum } from "../component/Feed/FeedElem";
 import "../component/Feed/styles.css";
 import Boy1 from "../images/boy.svg"
@@ -10,10 +10,16 @@ import Girl2 from "../images/girl-2.svg"
 import Girl3 from "../images/girl-3.svg"
 import * as Bs from 'react-icons/bs';
 import Footer from "../component/Footer"
+import SideBar from "../component/SideBar";
+import PopUp from "../component/Feed/PopUp";
 
 const Feed = () => {
+    const [buttonPopUp, setButtonPopUp] = useState(false);
+
     return (
+        
         <>
+        <SideBar />
         <FeedContainer>
             <FeedForum>
             <>
@@ -37,7 +43,7 @@ const Feed = () => {
                                         type="button"
                                         data-toggle="modal"
                                         data-target="#threadModal"
-                                    >
+                                    style={{backgroundColor: '#5ea3a3', borderColor:'#5ea3a3'}}>
                                         <Bs.BsPlus />
                                         NEW POST
                                     </button>
@@ -80,43 +86,43 @@ const Feed = () => {
                                                         >
                                                             <nav className="nav nav-pills nav-gap-y-1 flex-column">
                                                                 <a
-                                                                    href="javascript:void(0)"
+                                                                    href="/feed"
                                                                     className="nav-link nav-link-faded has-icon active"
                                                                 >
                                                                     All Discussion
                                                                 </a>
                                                                 <a
-                                                                    href="javascript:void(0)"
+                                                                    href="/feed"
                                                                     className="nav-link nav-link-faded has-icon"
                                                                 >
                                                                     #ReviewMyResume
                                                                 </a>
                                                                 <a
-                                                                    href="javascript:void(0)"
+                                                                    href="/feed"
                                                                     className="nav-link nav-link-faded has-icon"
                                                                 >
                                                                     #InterviewQuestions
                                                                 </a>
                                                                 <a
-                                                                    href="javascript:void(0)"
+                                                                    href="/feed"
                                                                     className="nav-link nav-link-faded has-icon"
                                                                 >
                                                                     #CompanyReviews
                                                                 </a>
                                                                 <a
-                                                                    href="javascript:void(0)"
+                                                                    href="/feed"
                                                                     className="nav-link nav-link-faded has-icon"
                                                                 >
                                                                     #AskCounsellor
                                                                 </a>
                                                                 <a
-                                                                    href="javascript:void(0)"
+                                                                    href="/feed"
                                                                     className="nav-link nav-link-faded has-icon"
                                                                 >
                                                                     #General
                                                                 </a>
                                                                 <a
-                                                                    href="javascript:void(0)"
+                                                                    href="/feed"
                                                                     className="nav-link nav-link-faded has-icon"
                                                                 >
                                                                     #C2001
@@ -173,7 +179,7 @@ const Feed = () => {
                                 <div className="inner-main-header">
                                     <a
                                         className="nav-link nav-icon rounded-circle nav-link-faded mr-3 d-md-none"
-                                        href="#"
+                                        href="/feeds"
                                         data-toggle="inner-sidebar"
                                     >
                                         <i className="material-icons">
@@ -191,6 +197,7 @@ const Feed = () => {
                                             type="text"
                                             className="form-control form-control-sm bg-gray-200 border-gray-200 shadow-none mb-4 mt-4"
                                             placeholder="Search forum"
+                                            style={{width: "400px"}}
                                         />
                                     </span>
                                 </div>
@@ -202,7 +209,7 @@ const Feed = () => {
                                         <div className="card-body p-2 p-sm-3">
                                             <div className="media forum-item">
                                                 <a
-                                                    href="#"
+                                                    href="/feed"
                                                     data-toggle="collapse"
                                                     data-target=".forum-content"
                                                 >
@@ -215,23 +222,21 @@ const Feed = () => {
                                                 </a>
                                                 <div className="media-body">
                                                     <h6>
-                                                        <a
-                                                            href="#"
+                                                        <button
                                                             data-toggle="collapse"
                                                             data-target=".forum-content"
-                                                            className="text-body title"
+                                                            className="text-body title btn"
+                                                            onClick={() => setButtonPopUp(true)}
                                                         >
-                                                            Is my resume well-formated?
-                                                        </a>
+                                                            Is my resume well-formatted?
+                                                        </button>
                                                     </h6>
                                                     <p className="text-secondary">
-                                                        lorem ipsum dolor sit
-                                                        amet lorem ipsum dolor
-                                                        sit amet lorem ipsum
-                                                        dolor sit amet
+                                                        I am planning to apply for internship on October. But...
                                                     </p>
+                                                    
                                                     <p className="text-muted">
-                                                        <a href="javascript:void(0)">
+                                                        <a href="/feed">
                                                             swbd0032
                                                         </a>{" "}
                                                         replied{" "}
@@ -261,7 +266,7 @@ const Feed = () => {
                                         <div className="card-body p-2 p-sm-3">
                                             <div className="media forum-item">
                                                 <a
-                                                    href="#"
+                                                    href="/feed"
                                                     data-toggle="collapse"
                                                     data-target=".forum-content"
                                                 >
@@ -274,23 +279,21 @@ const Feed = () => {
                                                 </a>
                                                 <div className="media-body">
                                                     <h6>
-                                                        <a
-                                                            href="#"
+                                                        <button
+                                                            href="/feed"
                                                             data-toggle="collapse"
                                                             data-target=".forum-content"
-                                                            className="text-body title"
+                                                            className="text-body title btn"
                                                         >
                                                             Anyone heard kkDex Company?
-                                                        </a>
+                                                        </button>
                                                     </h6>
                                                     <p className="text-secondary">
-                                                        lorem ipsum dolor sit
-                                                        amet lorem ipsum dolor
-                                                        sit amet lorem ipsum
-                                                        dolor sit amet
+                                                        My senior told me about kkDex yesterday. Anyone 
+                                                        working/worked at there?
                                                     </p>
                                                     <p className="text-muted">
-                                                        <a href="javascript:void(0)">
+                                                        <a href="/feed">
                                                             oweh0382
                                                         </a>{" "}
                                                         replied{" "}
@@ -319,7 +322,7 @@ const Feed = () => {
                                         <div className="card-body p-2 p-sm-3">
                                             <div className="media forum-item">
                                                 <a
-                                                    href="#"
+                                                    href="/feed"
                                                     data-toggle="collapse"
                                                     data-target=".forum-content"
                                                 >
@@ -332,23 +335,21 @@ const Feed = () => {
                                                 </a>
                                                 <div className="media-body">
                                                     <h6>
-                                                        <a
-                                                            href="#"
+                                                        <button
+                                                            href="/feed"
                                                             data-toggle="collapse"
                                                             data-target=".forum-content"
-                                                            className="text-body title"
+                                                            className="text-body title btn"
                                                         >
                                                             Is my CGPA enough to get into FLAG?
-                                                        </a>
+                                                        </button>
                                                     </h6>
                                                     <p className="text-secondary">
-                                                        lorem ipsum dolor sit
-                                                        amet lorem ipsum dolor
-                                                        sit amet lorem ipsum
-                                                        dolor sit amet
+                                                        I just got my results for this semester, passed 
+                                                        all units and final CGPA is ...
                                                     </p>
                                                     <p className="text-muted">
-                                                        <a href="javascript:void(0)">
+                                                        <a href="/feed">
                                                             wtan0019
                                                         </a>{" "}
                                                         replied{" "}
@@ -377,7 +378,7 @@ const Feed = () => {
                                         <div className="card-body p-2 p-sm-3">
                                             <div className="media forum-item">
                                                 <a
-                                                    href="#"
+                                                    href="/feed"
                                                     data-toggle="collapse"
                                                     data-target=".forum-content"
                                                 >
@@ -390,23 +391,21 @@ const Feed = () => {
                                                 </a>
                                                 <div className="media-body">
                                                     <h6>
-                                                        <a
-                                                            href="#"
+                                                        <button
+                                                            href="/feed"
                                                             data-toggle="collapse"
                                                             data-target=".forum-content"
-                                                            className="text-body title"
+                                                            className="text-body title btn"
                                                         >
                                                             [Tips] 10 Most Common Interview Questions
-                                                        </a>
+                                                        </button>
                                                     </h6>
                                                     <p className="text-secondary">
-                                                        lorem ipsum dolor sit
-                                                        amet lorem ipsum dolor
-                                                        sit amet lorem ipsum
-                                                        dolor sit amet
+                                                        Been going to interviews for more than 20 times, 
+                                                        I am fully experienced with ...
                                                     </p>
                                                     <p className="text-muted">
-                                                        <a href="javascript:void(0)">
+                                                        <a href="/feed">
                                                             qsia1292
                                                         </a>{" "}
                                                         replied{" "}
@@ -435,7 +434,7 @@ const Feed = () => {
                                         <div className="card-body p-2 p-sm-3">
                                             <div className="media forum-item">
                                                 <a
-                                                    href="#"
+                                                    href="/feed"
                                                     data-toggle="collapse"
                                                     data-target=".forum-content"
                                                 >
@@ -448,23 +447,21 @@ const Feed = () => {
                                                 </a>
                                                 <div className="media-body">
                                                     <h6>
-                                                        <a
-                                                            href="#"
+                                                        <button
+                                                            href="/feed"
                                                             data-toggle="collapse"
                                                             data-target=".forum-content"
-                                                            className="text-body title"
+                                                            className="text-body title btn"
                                                         >
                                                             Can I apply Internship in my home country?
-                                                        </a>
+                                                        </button>
                                                     </h6>
                                                     <p className="text-secondary">
-                                                        lorem ipsum dolor sit
-                                                        amet lorem ipsum dolor
-                                                        sit amet lorem ipsum
-                                                        dolor sit amet
+                                                        Internship during this summer semester, but I am
+                                                        not able to return to Malaysia ... 
                                                     </p>
                                                     <p className="text-muted">
-                                                        <a href="javascript:void(0)">
+                                                        <a href="/feed">
                                                             Lim
                                                         </a>{" "}
                                                         replied{" "}
@@ -493,7 +490,7 @@ const Feed = () => {
                                         <div className="card-body p-2 p-sm-3">
                                             <div className="media forum-item">
                                                 <a
-                                                    href="#"
+                                                    href="/feed"
                                                     data-toggle="collapse"
                                                     data-target=".forum-content"
                                                 >
@@ -506,23 +503,21 @@ const Feed = () => {
                                                 </a>
                                                 <div className="media-body">
                                                     <h6>
-                                                        <a
-                                                            href="#"
+                                                        <button
+                                                            href="/feed"
                                                             data-toggle="collapse"
                                                             data-target=".forum-content"
-                                                            className="text-body title"
+                                                            className="text-body title btn"
                                                         >
                                                             [Tips] Writing the Perfect Resume
-                                                        </a>
+                                                        </button>
                                                     </h6>
                                                     <p className="text-secondary">
-                                                        lorem ipsum dolor sit
-                                                        amet lorem ipsum dolor
-                                                        sit amet lorem ipsum
-                                                        dolor sit amet
+                                                        Here are some of my experiences on writing the 
+                                                        perfect resume ... 
                                                     </p>
                                                     <p className="text-muted">
-                                                        <a href="javascript:void(0)">
+                                                        <a href="/feed">
                                                             ploh0001
                                                         </a>{" "}
                                                         replied{" "}
@@ -551,7 +546,7 @@ const Feed = () => {
                                         <div className="card-body p-2 p-sm-3">
                                             <div className="media forum-item">
                                                 <a
-                                                    href="#"
+                                                    href="/feed"
                                                     data-toggle="collapse"
                                                     data-target=".forum-content"
                                                 >
@@ -564,23 +559,21 @@ const Feed = () => {
                                                 </a>
                                                 <div className="media-body">
                                                     <h6>
-                                                        <a
-                                                            href="#"
+                                                        <button
+                                                            href="/feed"
                                                             data-toggle="collapse"
                                                             data-target=".forum-content"
-                                                            className="text-body title"
+                                                            className="text-body title btn"
                                                         >
                                                             [Sharing] My working experience at Google as a SDE
-                                                        </a>
+                                                        </button>
                                                     </h6>
                                                     <p className="text-secondary">
-                                                        lorem ipsum dolor sit
-                                                        amet lorem ipsum dolor
-                                                        sit amet lorem ipsum
-                                                        dolor sit amet
+                                                        I have worked at Google for 2 years, and many juniors
+                                                        asked me about ... 
                                                     </p>
                                                     <p className="text-muted">
-                                                        <a href="javascript:void(0)">
+                                                        <a href="/feed">
                                                             ktey0001
                                                         </a>{" "}
                                                         replied{" "}
@@ -607,25 +600,27 @@ const Feed = () => {
                                     </div>
                                     <ul className="pagination pagination-sm pagination-circle justify-content-center mb-0">
                                         <li className="page-item disabled">
-                                            <span className="page-link has-icon">
+                                            <span className="page-link has-icon" style={{color:"#5ea3a3"}}>
                                                 <Bs.BsChevronLeft />
                                             </span>
                                         </li>
                                         <li className="page-item">
                                             <a
                                                 className="page-link"
-                                                href="javascript:void(0)"
+                                                href="/feed"
+                                                style={{color:"#5ea3a3"}}
                                             >
                                                 1
                                             </a>
                                         </li>
-                                        <li className="page-item active">
-                                            <span className="page-link">2</span>
+                                        <li className="page-item active" >
+                                            <span className="page-link" style={{backgroundColor: '#5ea3a3', color:"#fff", borderColor:'#5ea3a3'}}>2</span>
                                         </li>
                                         <li className="page-item">
                                             <a
                                                 className="page-link"
-                                                href="javascript:void(0)"
+                                                href="/feed"
+                                                style={{color:"#5ea3a3"}}
                                             >
                                                 3
                                             </a>
@@ -633,7 +628,8 @@ const Feed = () => {
                                         <li className="page-item">
                                             <a
                                                 className="page-link has-icon"
-                                                href="javascript:void(0)"
+                                                href="/feed"
+                                                style={{color:"#5ea3a3"}}
                                             >
                                                 {/* <i className="material-icons">
                                                     chevron_right
@@ -643,238 +639,17 @@ const Feed = () => {
                                         </li>
                                     </ul>
                                 </div>
-                                {/* /Forum List */}
-                                {/* Forum Detail */}
-                                {/* <div className="inner-main-body p-2 p-sm-3 collapse forum-content">
-                                    <a
-                                        href="#"
-                                        className="btn btn-light btn-sm mb-3 has-icon"
-                                        data-toggle="collapse"
-                                        data-target=".forum-content"
-                                    >
-                                        <i className="fa fa-arrow-left mr-2" />
-                                        Back
-                                    </a>
-                                    <div className="card mb-2">
-                                        <div className="card-body">
-                                            <div className="media forum-item">
-                                                <a
-                                                    href="javascript:void(0)"
-                                                    className="card-link"
-                                                >
-                                                    <img
-                                                        src="https://bootdey.com/img/Content/avatar/avatar1.png"
-                                                        className="rounded-circle"
-                                                        width={50}
-                                                        alt="User"
-                                                    />
-                                                    <small className="d-block text-center text-muted">
-                                                        Newbie
-                                                    </small>
-                                                </a>
-                                                <div className="media-body ml-3">
-                                                    <a
-                                                        href="javascript:void(0)"
-                                                        className="text-secondary"
-                                                    >
-                                                        Mokrani
-                                                    </a>
-                                                    <small className="text-muted ml-2">
-                                                        1 hour ago
-                                                    </small>
-                                                    <h5 className="mt-1">
-                                                        Realtime fetching data
-                                                    </h5>
-                                                    <div className="mt-3 font-size-sm">
-                                                        <p>Hellooo :)</p>
-                                                        <p>
-                                                            I'm newbie with
-                                                            laravel and i want
-                                                            to fetch data from
-                                                            database in realtime
-                                                            for my dashboard
-                                                            anaytics and i found
-                                                            a solution with ajax
-                                                            but it dosen't work
-                                                            if any one have a
-                                                            simple solution it
-                                                            will be helpful
-                                                        </p>
-                                                        <p>Thank</p>
-                                                    </div>
-                                                </div>
-                                                <div className="text-muted small text-center">
-                                                    <span className="d-none d-sm-inline-block">
-                                                        <i className="far fa-eye" />{" "}
-                                                        19
-                                                    </span>
-                                                    <span>
-                                                        <i className="far fa-comment ml-2" />{" "}
-                                                        3
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="card mb-2">
-                                        <div className="card-body">
-                                            <div className="media forum-item">
-                                                <a
-                                                    href="javascript:void(0)"
-                                                    className="card-link"
-                                                >
-                                                    <img
-                                                        src="https://bootdey.com/img/Content/avatar/avatar2.png"
-                                                        className="rounded-circle"
-                                                        width={50}
-                                                        alt="User"
-                                                    />
-                                                    <small className="d-block text-center text-muted">
-                                                        Pro
-                                                    </small>
-                                                </a>
-                                                <div className="media-body ml-3">
-                                                    <a
-                                                        href="javascript:void(0)"
-                                                        className="text-secondary"
-                                                    >
-                                                        drewdan
-                                                    </a>
-                                                    <small className="text-muted ml-2">
-                                                        1 hour ago
-                                                    </small>
-                                                    <div className="mt-3 font-size-sm">
-                                                        <p>
-                                                            What exactly doesn't
-                                                            work with your ajax
-                                                            calls?
-                                                        </p>
-                                                        <p>
-                                                            Also, WebSockets are
-                                                            a great solution for
-                                                            realtime data on a
-                                                            dashboard. Laravel
-                                                            offers this out of
-                                                            the box using
-                                                            broadcasting
-                                                        </p>
-                                                    </div>
-                                                    <button className="btn btn-xs text-muted has-icon">
-                                                        <i
-                                                            className="fa fa-heart"
-                                                            aria-hidden="true"
-                                                        />
-                                                        1
-                                                    </button>
-                                                    <a
-                                                        href="javascript:void(0)"
-                                                        className="text-muted small"
-                                                    >
-                                                        Reply
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> */}
-                                {/* /Forum Detail */}
-                                {/* /Inner main body */}
+                                
                             </div>
                             {/* /Inner main */}
                         </div>
-                        {/* New Thread Modal
-                        <div
-                            className="modal fade"
-                            id="threadModal"
-                            tabIndex={-1}
-                            role="dialog"
-                            aria-labelledby="threadModalLabel"
-                            aria-hidden="true"
-                        >
-                            <div
-                                className="modal-dialog modal-lg"
-                                role="document"
-                            >
-                                <div className="modal-content">
-                                    <form>
-                                        <div className="modal-header d-flex align-items-center bg-primary text-white">
-                                            <h6
-                                                className="modal-title mb-0"
-                                                id="threadModalLabel"
-                                            >
-                                                New Discussion
-                                            </h6>
-                                            <button
-                                                type="button"
-                                                className="close"
-                                                data-dismiss="modal"
-                                                aria-label="Close"
-                                            >
-                                                <span aria-hidden="true">
-                                                    ×
-                                                </span>
-                                            </button>
-                                        </div>
-                                        <div className="modal-body">
-                                            <div className="form-group">
-                                                <label htmlFor="threadTitle">
-                                                    Title
-                                                </label>
-                                                <input
-                                                    type="text"
-                                                    className="form-control"
-                                                    id="threadTitle"
-                                                    placeholder="Enter title"
-                                                    autofocus
-                                                />
-                                            </div>
-                                            <textarea
-                                                className="form-control summernote"
-                                                style={{ display: "none" }}
-                                                defaultValue={""}
-                                            />
-                                            <div
-                                                className="custom-file form-control-sm mt-3"
-                                                style={{ maxWidth: 300 }}
-                                            >
-                                                <input
-                                                    type="file"
-                                                    className="custom-file-input"
-                                                    id="customFile"
-                                                    multiple
-                                                />
-                                                <label
-                                                    className="custom-file-label"
-                                                    htmlFor="customFile"
-                                                >
-                                                    Attachment
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div className="modal-footer">
-                                            <button
-                                                type="button"
-                                                className="btn btn-light"
-                                                data-dismiss="modal"
-                                            >
-                                                Cancel
-                                            </button>
-                                            <button
-                                                type="button"
-                                                className="btn btn-primary"
-                                            >
-                                                Post
-                                            </button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div> */}
+                        
                     </div>
                 </div>
             </>
             </FeedForum>
             </FeedContainer>
+            <PopUp trigger={buttonPopUp} setTrigger={setButtonPopUp}></PopUp>
             <Footer />
         </>
         

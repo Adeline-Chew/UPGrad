@@ -10,29 +10,12 @@ import { jobObj1, jobObj2, jobObj3,
         jobObj4, jobObj5, jobObj6,
         jobObj7, jobObj8, jobObj9,
         jobObj10, jobObj11, jobObj12,
-        jobObj13, jobObj14, jobObj15, } from './JobData';
+        jobObj13} from './JobData';
 import JobCard from './JobCard';
-import { Searchbar } from 'react';
 import Filters from "./filters.jsx";
 import './filters.css'
 
-const styles = {
-    cardImage: {
-      objectFit: 'cover',
-      borderRadius: 55,
-      height: 180,
-      width: 286
-    }
-  }
-
-
-
-const JobPage = ({id,
-    companyName,
-    description,
-    buttonLabel,
-    img,
-    alt}) => {
+const JobPage = () => {
     return (
         <>
             <JobContainer>

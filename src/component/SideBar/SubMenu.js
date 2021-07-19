@@ -17,7 +17,6 @@ const SidebarLink = styled(Link)`
   text-decoration: none;
   font-size: 18px;
   &:hover {
-    /* background: #252831; */
     border-left: 4px solid ${hoverBar};
     color: ${hoverTextColor};
     cursor: pointer;

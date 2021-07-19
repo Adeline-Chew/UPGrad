@@ -4,7 +4,7 @@ var bgcolor = '#faf9f9';
 var lightGreen = '#76dbd1';
 
 export const DashboardContainer = styled.div `
-    height: 1500px;
+    height: 1700px;
     background-color: ${bgcolor};
     align-items: space-between;
     align-content: space-between;

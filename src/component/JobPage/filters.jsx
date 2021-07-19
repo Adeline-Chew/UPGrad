@@ -35,6 +35,7 @@ class Filters extends React.Component {
   getActiveFilters = arr => {
     const keys = Object.keys(arr);
 
+    // eslint-disable-next-line array-callback-return
     const activeFilters = keys.map(el => {
       const isTrue = arr[el] === true;
       const hasValue = typeof arr[el] === "string" && arr[el].trim();

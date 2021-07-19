@@ -10,8 +10,8 @@ import {
     CardTitleH1,
     CarouselContainer
 } from "./DashboardElem";
-
-// import Carousel from "react-elastic-carousel";
+import Zoom from 'react-reveal/Zoom';
+import Fade from 'react-reveal/Fade';
 import Table from "react-bootstrap/Table";
 import Carousel from "react-bootstrap/Carousel";
 import image1 from "../../images/google-poster.jpeg";
@@ -22,10 +22,14 @@ const Dashboard = () => {
 
     return (
         <>
-            <DashboardContainer>
-                <DashboardH1>Welcome Back, Sheep Meh Meh</DashboardH1>
+            <DashboardContainer className="DashboardContainer">
+                <Zoom>
+                    <DashboardH1>Welcome Back, Sheep Meh Meh</DashboardH1>
+                </Zoom>
+                
 
                 <DashboardContent className="dashboardContent">
+                <Fade bottom>
                     <DashboardCard>
                         <CardTitle>
                             <CardTitleH1>9 Jobs Applied</CardTitleH1>
@@ -99,6 +103,8 @@ const Dashboard = () => {
                             </Table>
                         </TableWrapper>
                     </DashboardCard>
+                    </Fade>
+                    <Fade bottom>
                     <DashboardCard>
                         <CardTitle>
                             <CardTitleH1>Incoming Interviews</CardTitleH1>
@@ -142,6 +148,7 @@ const Dashboard = () => {
                             </Table>
                         </TableWrapper>
                     </DashboardCard>
+                    </Fade>
                 </DashboardContent>
                 <CarouselContainer className="CarouselContainer">
                 <CarouselWrapper>

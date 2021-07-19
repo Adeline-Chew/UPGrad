@@ -21,8 +21,8 @@ export const ProfileInformation = () => {
                                     width={150}
                                 />
                                 <div className="mt-3">
-                                    <ProfileName>John Doe</ProfileName>
-                                    <ProfileSum className="text-secondary mb-1">Full Stack Developer</ProfileSum>
+                                    <ProfileName>Sheep Meh Meh</ProfileName>
+                                    <ProfileSum className="text-secondary mb-1">Full Stack Developer And Student</ProfileSum>
                                     <ProfileSum className="text-muted font-size-sm">Subang Jaya, Selengor, Malaysia</ProfileSum>
                                     <ProfileButton className="btn btn-outline-primary">Follow</ProfileButton>
                                     <ProfileButton className="btn btn-outline-primary">Message</ProfileButton>
@@ -39,7 +39,7 @@ export const ProfileInformation = () => {
                                     <DetailsH6 className="mb-0">Full Name</DetailsH6>
                                 </div>
                                 <DetailsDes className="col-sm-9 text-secondary">
-                                    John Doe
+                                    Sheep Meh Meh
                                 </DetailsDes>
                             </div>
                             <hr/>
@@ -48,7 +48,7 @@ export const ProfileInformation = () => {
                                     <DetailsH6 className="mb-0">Email</DetailsH6>
                                 </div>
                                 <DetailsDes className="col-sm-9 text-secondary">
-                                    abc@mail.co.kk
+                                    acbd0123@student.monash.edu
                                 </DetailsDes>
                             </div>
                             <hr />
@@ -63,10 +63,10 @@ export const ProfileInformation = () => {
                             <hr />
                             <div className="row">
                                 <div className="col-sm-3">
-                                    <DetailsH6 className="mb-0">Mobile</DetailsH6>
+                                    <DetailsH6 className="mb-0">Course</DetailsH6>
                                 </div>
                                 <DetailsDes className="col-sm-9 text-secondary">
-                                    +6012-3456789
+                                    Bachelor of Computer Science
                                 </DetailsDes>
                             </div>
                             <hr />

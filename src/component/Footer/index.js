@@ -14,13 +14,16 @@ import {
     SocialIcons,
     SocialIconLink
 } from './FooterElement'
-import {animateScroll as scroll} from 'react-scroll'
 
 import {FaFacebook, FaInstagram, FaGithub, FaLinkedin} from 'react-icons/fa'
 
 const Footer = () => {
     const toggleHome = () => {
-        scroll.scrollToTop();
+        // scroll.scrollToTop();
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+          });
     };
     return (
         <FooterContainer>

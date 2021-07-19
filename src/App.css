@@ -29,3 +29,14 @@ p, td {
   display: none;
 }
 
+.home {
+  display: flex-start;
+}
+.btn-primary {
+  background-color: #5ea3a3;
+  border-color: #5ea3a3;
+}
+
+.nav-link:hover {
+  color: #5ea3a3;
+}

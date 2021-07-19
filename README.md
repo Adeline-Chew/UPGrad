@@ -1,13 +1,7 @@
-// What is the name of this Application
-// The purpose of creating this app?
-// Main Features of UPGrad
-//Tech Stack
-// How to open this app
-
 # Our Team
-**LightBringers 2.0** </br>
-1. Adeline Chew Yao Yi </br>
-2. Shaun Tan Wei Jie </br>
+## BigHead&SmallCoders</br>
+1. Adeline Chew Yao Yi</br>
+2. Shaun Tan Wei Jie</br>
 3. Tey Kai Ying
 
 # About This Project
@@ -45,9 +39,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
-In the project directory (/upgrad), you can run:
+In the project directory (inside /upgrad), you can run:
 
 ### `yarn start`
 
 Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Open [http://localhost:3000](http://localhost:3000) to view our web app in the browser (Google Chrome is recommended).

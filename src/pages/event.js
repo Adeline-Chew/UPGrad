@@ -5,10 +5,12 @@ import EventCard from '../component/EventPage/EventCard';
 import image1 from "../images/event-2.jpeg";
 import image2 from "../images/google-poster.jpeg"
 import Footer from "../component/Footer"
+import SideBar from '../component/SideBar';
 
 const Event = () => {
     return (
         <>
+            <SideBar />
             <EventContainer>
 
             <EventTitle>Upcoming Events</EventTitle>

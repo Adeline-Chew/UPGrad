@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const JobContainer = styled.div `
     margin-top: 80px;
-    max-height: 100vh;
+    margin-bottom: 20px;
     justify-content: center;
     align-items: center;
     flex-direction: column;

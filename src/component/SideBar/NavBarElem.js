@@ -17,9 +17,8 @@ export const NavBarContainer = styled.div`
 
 export const NavLogoWrap = styled.div`
     max-width: 200px;
-    margin-right: 70px;
-    align-items: center;
-    justify-content: center;
+    margin-right: 30px;
+    justify-content: flex-end;
 `;
 
 export const NavLogo = styled(LinkR)`

@@ -8,9 +8,12 @@ import Boy6 from "../images/boy-6.svg";
 import Girl1 from "../images/girl.svg";
 import Girl2 from "../images/girl-2.svg";
 import Girl3 from "../images/girl-3.svg";
+import SideBar from "../component/SideBar";
 
 const Chat = () => {
     return (
+        <>
+        <SideBar />
         <ChatContainer>
             <link
                 href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
@@ -38,10 +41,10 @@ const Chat = () => {
                             style={{ marginTop: "20px" }}
                         >
                             <li className="active bounceInDown">
-                                <a href="#" className="clearfix">
+                                <a href="/chat" className="clearfix">
                                     <img
                                         src={Boy1}
-                                        alt
+                                        alt={Boy1}
                                         className="img-circle"
                                     />
                                     <FriendName>
@@ -59,10 +62,10 @@ const Chat = () => {
                                 </a>
                             </li>
                             <li>
-                                <a href="#" className="clearfix">
+                                <a href="/chat" className="clearfix">
                                     <img
                                         src={Girl1}
-                                        alt
+                                        alt={Girl1}
                                         className="img-circle"
                                     />
                                     <FriendName>
@@ -80,10 +83,10 @@ const Chat = () => {
                                 </a>
                             </li>
                             <li>
-                                <a href="#" className="clearfix">
+                                <a href="/chat" className="clearfix">
                                     <img
                                         src={Boy2}
-                                        alt
+                                        alt={Boy2}
                                         className="img-circle"
                                     />
                                     <FriendName>
@@ -101,10 +104,10 @@ const Chat = () => {
                                 </a>
                             </li>
                             <li>
-                                <a href="#" className="clearfix">
+                                <a href="/chat" className="clearfix">
                                     <img
                                         src={Boy3}
-                                        alt
+                                        alt={Boy3}
                                         className="img-circle"
                                     />
                                     <FriendName>
@@ -122,10 +125,10 @@ const Chat = () => {
                                 </a>
                             </li>
                             <li>
-                                <a href="#" className="clearfix">
+                                <a href="/chat" className="clearfix">
                                     <img
                                         src={Girl2}
-                                        alt
+                                        alt={Girl2}
                                         className="img-circle"
                                     />
                                     <FriendName>
@@ -143,10 +146,10 @@ const Chat = () => {
                                 </a>
                             </li>
                             <li>
-                                <a href="#" className="clearfix">
+                                <a href="/chat" className="clearfix">
                                     <img
                                         src={Girl3}
-                                        alt
+                                        alt={Girl3}
                                         className="img-circle"
                                     />
                                     <FriendName>
@@ -164,10 +167,10 @@ const Chat = () => {
                                 </a>
                             </li>
                             <li>
-                                <a href="#" className="clearfix">
+                                <a href="/chat" className="clearfix">
                                     <img
                                         src={Boy2}
-                                        alt
+                                        alt={Boy2}
                                         className="img-circle"
                                     />
                                     <FriendName>
@@ -185,10 +188,10 @@ const Chat = () => {
                                 </a>
                             </li>
                             <li>
-                                <a href="#" className="clearfix">
+                                <a href="/chat" className="clearfix">
                                     <img
                                         src={Girl2}
-                                        alt
+                                        alt={Girl2}
                                         className="img-circle"
                                     />
                                     <FriendName>
@@ -229,12 +232,11 @@ const Chat = () => {
                                             </strong>
                                             <small className="pull-right text-muted">
                                                 <i className="fa fa-clock-o" />{" "}
-                                                12 mins ago
+                                                14 mins ago
                                             </small>
                                         </div>
                                         <p style={{ fontSize: "20px" }}>
-                                            Lorem ipsum dolor sit amet,
-                                            consectetur adipiscing elit.
+                                            Hello Justin, nice to meet you! I am Shaun mehhh
                                         </p>
                                     </div>
                                 </li>
@@ -253,10 +255,8 @@ const Chat = () => {
                                             </small>
                                         </div>
                                         <p style={{ fontSize: "20px" }}>
-                                            Lorem ipsum dolor sit amet,
-                                            consectetur adipiscing elit.
-                                            Curabitur bibendum ornare dolor,
-                                            quis ullamcorper ligula sodales at.
+                                            Hey yo! Great to meet you. Which course are you
+                                            currently in?
                                         </p>
                                     </div>
                                 </li>
@@ -273,8 +273,8 @@ const Chat = () => {
                                             </small>
                                         </div>
                                         <p style={{ fontSize: "20px" }}>
-                                            Lorem ipsum dolor sit amet,
-                                            consectetur adipiscing elit.
+                                            I am currently a year 3 Computer Science student. 
+                                            How about you?
                                         </p>
                                     </div>
                                 </li>
@@ -293,10 +293,8 @@ const Chat = () => {
                                             </small>
                                         </div>
                                         <p style={{ fontSize: "20px" }}>
-                                            Lorem ipsum dolor sit amet,
-                                            consectetur adipiscing elit.
-                                            Curabitur bibendum ornare dolor,
-                                            quis ullamcorper ligula sodales at.
+                                            Cool cool. I am currently taking Engineering, year 3 as well.
+                                            I saw your profile. You worked at Apple Inc. before?
                                         </p>
                                     </div>
                                 </li>
@@ -315,8 +313,7 @@ const Chat = () => {
                                             </small>
                                         </div>
                                         <p style={{ fontSize: "20px" }}>
-                                            Lorem ipsum dolor sit amet,
-                                            consectetur adipiscing elit.
+                                            Yes I did. It was really a good experience!
                                         </p>
                                     </div>
                                 </li>
@@ -335,10 +332,9 @@ const Chat = () => {
                                             </small>
                                         </div>
                                         <p style={{ fontSize: "20px" }}>
-                                            Lorem ipsum dolor sit amet,
-                                            consectetur adipiscing elit.
-                                            Curabitur bibendum ornare dolor,
-                                            quis ullamcorper ligula sodales at.
+                                            Oh wow that's cool. Could you tell me more about your 
+                                            working experience
+                                            in Apple? 
                                         </p>
                                     </div>
                                 </li>
@@ -357,10 +353,7 @@ const Chat = () => {
                                             </small>
                                         </div>
                                         <p style={{ fontSize: "20px" }}>
-                                            Lorem ipsum dolor sit amet,
-                                            consectetur adipiscing elit.
-                                            Curabitur bibendum ornare dolor,
-                                            quis ullamcorper ligula sodales at.
+                                            By the way, I wanna ask you about interview tips too. Free to meet?
                                         </p>
                                     </div>
                                 </li>
@@ -396,6 +389,7 @@ const Chat = () => {
                 </div>
             </div>
         </ChatContainer>
+        </>
     );
 };
 

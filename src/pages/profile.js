@@ -19,10 +19,12 @@ import AppLab from "../images/applabs.jpeg";
 import Footer from "../component/Footer"
 
 import '../component/ProfilePage/styles.css';
+import SideBar from "../component/SideBar";
 
 const Profile = () => {
     return (
         <>
+        <SideBar />
             <ProfileContainer>
                 <ProfileLeft>
                     <ProfileInformation></ProfileInformation>
